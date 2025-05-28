@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import {
   CloudIcon, DocumentIcon, FolderIcon
 } from "@heroicons/react/24/solid";
@@ -20,8 +21,8 @@ const Nav = ({ sidebarOutsideClick }) => {
     setSubMenuToggleStatus(!subMenuToggleStatus);
   };
 
-   //if menu has chile menu then  use seperate array
-   const childMenu = [
+  //if menu has chile menu then  use seperate array
+  const childMenu = [
     {
       subMenuTitle: "child One",
       linkHref: "/"
@@ -45,7 +46,7 @@ const Nav = ({ sidebarOutsideClick }) => {
   return (
     <>
       <nav className="flex flex-col mx-4 my-6 space-y-4">
-       
+
 
         <NavItem
           hrefLink='/category'
@@ -55,7 +56,7 @@ const Nav = ({ sidebarOutsideClick }) => {
           subMenuArray={null}
         >
           <CloudIcon className="h-10" />
-        </NavItem> 
+        </NavItem>
 
         <NavItem
           hrefLink='/sub-category'
@@ -65,7 +66,7 @@ const Nav = ({ sidebarOutsideClick }) => {
           subMenuArray={null}
         >
           <DocumentIcon className="h-10" />
-        </NavItem> 
+        </NavItem>
 
         {/* this menu has child Menu     */}
         <NavItem
@@ -76,8 +77,8 @@ const Nav = ({ sidebarOutsideClick }) => {
           subMenuArray={childMenu}
         >
           <FolderIcon className="h-10" />
-        </NavItem> 
-       
+        </NavItem>
+
       </nav>
     </>
   );
